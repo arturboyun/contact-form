@@ -105,7 +105,6 @@ form {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  // padding: 20px 300px;
 
   .input_block {
     position: relative;
@@ -191,6 +190,12 @@ form {
     margin-top: 5px;
     color: red;
     font-size: 12px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    .row {
+      flex-direction: column;
+    }
   }
 }
 </style>

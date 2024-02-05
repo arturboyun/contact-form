@@ -39,6 +39,18 @@ configure({
     align-items: flex-start;
     padding: 20px 300px;
 
+    @media screen and (max-width: 1280px){
+      padding: 20px 100px;
+      flex-direction: column;
+      .breadcrumbs {
+        padding: 20px 20px;
+      }
+    }
+
+    @media screen and (max-width: 740px){
+      padding: 20px 20px;
+    }
+
     .breadcrumbs {
       flex: 1 1 20%;
       font-size: 12px;
