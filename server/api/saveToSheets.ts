@@ -26,11 +26,30 @@ const jwt = new JWT({
     scopes: SCOPES,
 });
 export default defineEventHandler(async (event) => {
-    const body = await readBody(event)
-
+    let body = await readBody(event)
     const doc = new GoogleSpreadsheet('1C464KutevY8WXcH_cjvobQZGO3AWxtv2u4xtWBZq5Mw', jwt);
     await doc.loadInfo(); // loads document properties and worksheets
     const sheet = doc.sheetsByIndex[0];
+    body['Name'] = body['name']
+    body['Last Name'] = body['lastName']
+    body['Birthday Date'] = body['birthdayDate']
+    body['Passport Number'] = body['passportNumber']
+    body['Passport Issue Date'] = body['passportIssueDate']
+    body['Passport Issuer'] = body['passportIssuer']
+    body['Street'] = body['street']
+    body['House Number'] = body['houseNumber']
+    body['Appartment'] = body['doorNumber']
+
+    delete body['name']
+    delete body['lastName']
+    delete body['birthdayDate']
+    delete body['passportNumber']
+    delete body['passportIssueDate']
+    delete body['passportIssuer']
+    delete body['street']
+    delete body['houseNumber']
+    delete body['doorNumber']
+
     const rows = await sheet.addRows([
         body,
     ]);
