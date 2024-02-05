@@ -102,6 +102,7 @@ const passportIssuer = ref('');
 const street = ref('');
 const houseNumber = ref('');
 const doorNumber = ref('');
+const phoneNumber = ref('');
 
 
 const onSubmit = async () => {
