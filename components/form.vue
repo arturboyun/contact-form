@@ -136,7 +136,6 @@ form {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 20px;
 
     label {
       margin-bottom: 10px;
@@ -176,7 +175,6 @@ form {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    //gap: 20px;
 
     .input_block {
       position: relative;
