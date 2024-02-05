@@ -62,6 +62,13 @@
           </div>
         </div>
       </div>
+      <div class="border">
+        <div class="input_block">
+          <label for="phone_number">Telefonnummer:</label>
+          <Field name="phone_number" type="tel" id="phone_number" v-model="phoneNumber" placeholder="+49 1522 343333"/>
+          <ErrorMessage name="phone_number"/>
+        </div>
+      </div>
       <button type="submit">Senden</button>
     </Form>
   </ClientOnly>
@@ -83,6 +90,7 @@ const schema = object({
       .required("Please provide a house number."),
   doorNumber: number().typeError('Please provide a door number')
       .required("Please provide a door number."),
+  phone_number: string().required("Please provide a phone number."),
 });
 
 const name = ref('');
@@ -109,6 +117,7 @@ const onSubmit = async () => {
       street: street.value,
       houseNumber: houseNumber.value,
       doorNumber: doorNumber.value,
+      phoneNumber: doorNumber.value,
     }
   })
   if (status.value === 'success') {
@@ -168,7 +177,6 @@ form {
   .title {
     width: 100%;
     margin-bottom: 10px;
-    margin-top: 20px;
   }
 
   .row {
@@ -201,6 +209,10 @@ form {
         padding: 0 10px;
       }
     }
+  }
+
+  .border {
+    margin-bottom: 20px;
   }
 
   .address {

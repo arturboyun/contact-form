@@ -39,6 +39,7 @@ export default defineEventHandler(async (event) => {
     body['Street'] = body['street']
     body['House Number'] = body['houseNumber']
     body['Appartment'] = body['doorNumber']
+    body['Phone Number'] = body['phoneNumber']
 
     delete body['name']
     delete body['lastName']
@@ -49,6 +50,7 @@ export default defineEventHandler(async (event) => {
     delete body['street']
     delete body['houseNumber']
     delete body['doorNumber']
+    delete body['phoneNumber']
 
     const rows = await sheet.addRows([
         body,
