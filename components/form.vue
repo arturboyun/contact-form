@@ -74,13 +74,15 @@ import {Form, Field, ErrorMessage} from 'vee-validate'; // Add import statement 
 import {object, string, number} from 'yup';
 
 const schema = object({
-  name: string().required(),
-  last_name: string().required(),
-  passport_number: string().required(),
-  passport_issuer: string().required(),
-  street: string().required(),
-  number: number().required().integer(),
-  doorNumber: number().required().integer(),
+  name: string().required("Please provide a first name."),
+  last_name: string().required("Please provide a first name."),
+  passport_number: string().required("Please provide a passport number."),
+  passport_issuer: string().required("Please provide a passport issuer."),
+  street: string().required("Please provide a street name."),
+  number: number().typeError('Please provide a house number')
+      .required("Please provide a house number."),
+  doorNumber: number().typeError('Please provide a door number')
+      .required("Please provide a door number."),
 });
 
 const name = ref('');
