@@ -3,14 +3,14 @@
     <Form @submit="onSubmit" :validation-schema="schema">
       <div class="border">
         <div class="input_block">
-          <label for="name">FAMILIENNAME (in Blockschrift):</label>
-          <Field name="name" type="text" id="name" v-model="name"/>
+          <label for="last_name">FAMILIENNAME (in Blockschrift):</label>
+          <Field name="last_name" type="text" id="last_name" v-model="name"/>
           <ErrorMessage name="name"/>
         </div>
         <div class="input_block">
-          <label for="last_name">VORNAME lt. Geburtsurkunde (bei Fremden laut Reisepass):</label>
-          <Field name="last_name" type="text" id="last_name" v-model="lastName"/>
-          <ErrorMessage name="last_name"/>
+          <label for="name">VORNAME lt. Geburtsurkunde (bei Fremden laut Reisepass):</label>
+          <Field name="name" type="text" id="name" v-model="lastName"/>
+          <ErrorMessage name="name"/>
         </div>
         <div class="input_block">
           <label for="birthday_date">GEBURTSDATUM:</label>
@@ -75,7 +75,7 @@ import {object, string, number} from 'yup';
 
 const schema = object({
   name: string().required("Please provide a first name."),
-  last_name: string().required("Please provide a first name."),
+  last_name: string().required("Please provide a last name."),
   passport_number: string().required("Please provide a passport number."),
   passport_issuer: string().required("Please provide a passport issuer."),
   street: string().required("Please provide a street name."),
