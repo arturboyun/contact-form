@@ -65,7 +65,7 @@
       <div class="border">
         <div class="input_block">
           <label for="phone_number">Telefonnummer:</label>
-          <Field name="phone_number" type="tel" id="phone_number" v-model="phoneNumber" placeholder="+49 1522 343333"/>
+          <Field name="phone_number" type="tel" id="phone_number" v-model="phoneNumber" placeholder="+43 1522 343333"/>
           <ErrorMessage name="phone_number"/>
         </div>
       </div>
