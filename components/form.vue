@@ -118,7 +118,7 @@ const onSubmit = async () => {
       street: street.value,
       houseNumber: houseNumber.value,
       doorNumber: doorNumber.value,
-      phoneNumber: doorNumber.value,
+      phoneNumber: phoneNumber.value,
     }
   })
   if (status.value === 'success') {
