@@ -57,7 +57,7 @@
 <style>
 .footer {
     width: 100%;
-    padding: 20px 300px;
+    padding: 20px 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
