@@ -5,7 +5,7 @@
         <div class="input_block">
           <label for="last_name">FAMILIENNAME (in Blockschrift):</label>
           <Field name="last_name" type="text" id="last_name" v-model="name"/>
-          <ErrorMessage name="name"/>
+          <ErrorMessage name="last_name"/>
         </div>
         <div class="input_block">
           <label for="name">VORNAME lt. Geburtsurkunde (bei Fremden laut Reisepass):</label>
