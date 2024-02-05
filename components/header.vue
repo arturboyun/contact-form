@@ -38,7 +38,7 @@
   }
 
   @media screen and (max-width: 640px) {
-    justify-content: center;
+    //justify-content: center;
     .logo1 {
       position: absolute;
       top: 60%;
