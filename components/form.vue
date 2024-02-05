@@ -219,6 +219,7 @@ form {
   }
 
   @media screen and (max-width: 1280px) {
+    padding: 0;
     .border {
       border: 1px solid #ccc;
       margin-bottom: 10px;
