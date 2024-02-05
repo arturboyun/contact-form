@@ -160,6 +160,7 @@
     .block {
       flex-direction: column;
     }
+    padding: 20px 10px;
   }
 }
 </style>

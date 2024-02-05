@@ -12,7 +12,7 @@
       </div>
       <div class="input_block">
         <label for="birthday_date">GEBURTSDATUM:</label>
-        <VueDatePicker name="birthday_date" v-model="birthdayDate" locale="de" :enable-time-picker="false"/>
+        <VueDatePicker name="birthday_date" required v-model="birthdayDate" locale="de" :enable-time-picker="false"/>
       </div>
 
       <div class="title">Reisepass, Personalausweis</div>
@@ -25,7 +25,7 @@
         <div class="input_block">
           <label for="passport_issue_date">Ausstellungsdatum:</label>
           <VueDatePicker name="passport_issue_date" v-model="passportIssueDate" locale="de"
-                         :enable-time-picker="false"/>
+                         :enable-time-picker="false" required/>
         </div>
 
         <div class="input_block">
@@ -58,10 +58,16 @@
 import {ref} from 'vue';
 import VueDatePicker from '@vuepic/vue-datepicker';
 import {Form, Field, ErrorMessage} from 'vee-validate'; // Add import statement for ErrorMessage
-import {object, string} from 'yup';
+import {object, string, number} from 'yup';
 
 const schema = object({
   name: string().required(),
+  last_name: string().required(),
+  passport_number: string().required(),
+  passport_issuer: string().required(),
+  street: string().required(),
+  number: number().required(),
+  doorNumber: number().required(),
 });
 
 const name = ref('');
