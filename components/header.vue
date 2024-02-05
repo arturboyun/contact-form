@@ -9,7 +9,7 @@
 .header {
   width: 100%;
   border-bottom: 1px solid #ccc;
-  padding: 6px 50px;
+  padding: 6px 20px;
   display: flex;
   align-items: center;
   position: relative;
@@ -32,7 +32,6 @@
   .logo {
     height: 40px;
   }
-
 
   @media screen and (max-width: 1280px) {
   }
