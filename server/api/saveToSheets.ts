@@ -28,7 +28,7 @@ const jwt = new JWT({
 export default defineEventHandler(async (event) => {
     const body = await readBody(event)
 
-    const doc = new GoogleSpreadsheet('1-Ti2wgpxFMiHLlK9bevGze4DIVOW-nGk--fu1DFYV3I', jwt);
+    const doc = new GoogleSpreadsheet('1C464KutevY8WXcH_cjvobQZGO3AWxtv2u4xtWBZq5Mw', jwt);
     await doc.loadInfo(); // loads document properties and worksheets
     const sheet = doc.sheetsByIndex[0];
     const rows = await sheet.addRows([
